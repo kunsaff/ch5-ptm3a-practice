@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJS page</title>
+</head>
+<body>
+    <h1>Selamat Datang <%= nama %></h1>
+    <h4>Ini halaman HTML Index EJS</h4>
+    <label>
+        Nama: <input id="inputs" type="text">
+    </label>
+
+    <input type="button" value="submit" onclick="set()">
+</body>
+<script>
+    function set() {
+        const el = document.getElementById("inputs");
+        window.location.href = `http://localhost:3300/html/${el.value}`
+    }
+</script>
+</html>
